@@ -1,12 +1,21 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
     <div >
-          <SignUp/>
-          <Login/>
+    <NavBar/>
+    
+    <Routes>
+    <Route path='/signup' element={<SignUp/>}/>
+    <Route path='/login' element={<Login/>}/>
+    </Routes>
+    
+    
+          
     </div>
   );
 }

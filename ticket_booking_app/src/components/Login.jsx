@@ -1,28 +1,58 @@
-import React from 'react';
-import Inputs from './Inputs';
+import React, { useState } from 'react'
 import Button from './Button';
-
+import { useNavigate } from 'react-router-dom';
+import LogIn from './api/user/login';
 
 const Login = () => {
+
+  const [email , setEmail] = useState("");
+  const [password , setPassword] = useState("");
+  
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  }
+  
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  }
+ 
+  const navigate = useNavigate();
+
+const handleSubmit = async ()=>{
+  console.log(`email : ${email}`);
+  console.log(`password : ${password}`);
+
+const response = await LogIn( email, password);
+
+
+if (response===201){
+      console.log(response);
+      navigate("/signin");
+    }
+    else{
+      console.log("LogIn failed");
+    }
+}
+
   return (
-    <div>
+    <div >
     <center>
-    <div className='main bdy'>
-    <h1>Log In</h1>
+    <div className='main'>
+    <h1>LogIn</h1>
+    
     <div className='ip1'>
     <label className='labl'>ENTER YOUR EMAIL</label>
-    <Inputs type = "email"  title = "Enter your email"/>
+    <input className='input' onChange = {handleEmailChange} value = {email} type = "email"  title = "Enter your email"/>
     </div>
     <div className='ip1'>
     <label className='labl'>ENTER YOUR PASSWORD</label>
-    <Inputs type = "password"  title = "Enter your password"/>
+    <input className='input' onChange = {handlePasswordChange} value = {password} type = "password"  title = "Enter your password"/>
     </div>
-    <Button title= "LogIn"/>
+    <Button  title= "LogIn" onHandleSubmit = {()=>handleSubmit()} />
     </div>
     </center>
-    </div> 
+    </div>
   )
 }
 
-export default Login
-
+export default Login;
