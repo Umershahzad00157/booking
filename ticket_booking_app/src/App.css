@@ -48,16 +48,104 @@ body{
   margin-bottom: 300px;
 }
 .nav{
-  color: black;
+  color: #5B6E7A;
   list-style: none;
   text-decoration: none;
   font-size: 30px;
   font-weight: bolder;
-  padding: 30px;
+  padding: 10px;
+  /* border: 1px solid black; */
+  background-color: #9B978C ;
+  margin-right: 10px;
+  border-radius: 5px;
 }
+.nav:hover{
+  background-color: #BEAD96 ;
+  color: white;
+}
+
 .flx{
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   list-style: none;
+}
+.logo{
+  height: auto;
+  color: #5A6E7A ;
+  padding: 10px 30px;
+  background-color: #C6B298;
+  border-top-right-radius: 45%;
+  border-bottom-left-radius: 45% ;
+  border-bottom-right-radius: 45%;
+  border-top-left-radius: 45%  ;
+}
+
+.title{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color-scheme: linear-gradient(to right, #5A6E7A , #C6B298);
+}
+
+.nav_main{
+  padding-top: 20px ;
+  display: flex;
+  justify-content: space-around;
+}
+.countries{
+  margin-top: 50px;
+}
+.row_1, .row_2, .row_3{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+.events{
+  flex-basis: 20%;
+  height: 30vh;
+  border-radius: 7%;
+  background-color: aqua;
+  background-image: url("../src/assests/images/post1.jpeg");
+  background-size: 100% 100%;
+}
+.enent_heading{
+  text-align: center;
+  margin-top: 30px;
+  color: #113946;
+}
+.hr{
+ background-color: #191D20;
+}
+.footer_main{
+  /* background-image: linear-gradient(to right, #C6B298 ,#5A6E7A ); */
+  background-color: #113946 ;
+
+}
+.footer{
+  margin-top: 60px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 60px;
+}
+.rights{
+  text-align: center;
+  color: #fefefe;
+  font-size: 22px;
+  margin-top: 40px;
+}
+.footer_bottom{
+  background-color: #113946 ;
+}
+.icon{
+  color: white;
+  margin-top: 10px;
+}
+.contact_us{
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  
 }
 
