@@ -2,8 +2,14 @@ import React, { useState } from 'react'
 import Button from './Button';
 import { useNavigate } from 'react-router-dom';
 import LogIn from './api/user/login';
+import { useDispatch } from 'react-redux';
+import { userLogin } from '../app/features/userSlice';
+
 
 const Login = () => {
+
+
+  const dispatch = useDispatch();
 
   const [email , setEmail] = useState("");
   const [password , setPassword] = useState("");
@@ -22,12 +28,27 @@ const handleSubmit = async ()=>{
   console.log(`email : ${email}`);
   console.log(`password : ${password}`);
 
+  dispatch(
+    userLogin ({
+      email:email, 
+      password:password,
+    }));
+
+
+  // dispatch(login({ user: { email: email, password: password }}));
+
+
+
+
+
+
+
 const response = await LogIn( email, password);
 
 
 if (response===201){
       console.log(response);
-      navigate("/signin");
+      navigate("/home");
     }
     else{
       console.log("LogIn failed");

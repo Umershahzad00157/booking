@@ -1,39 +1,31 @@
 import React from 'react';
-import NavBar from './NavBar';
 import Footer from './Footer';
+import EventCard from './EventCard';
 
 const Home = () => {
   return (
     <div>
-    <NavBar/>
+  
     <br/><hr className='hr'/><br/>
-    <h1 className='enent_heading'>EVENTS</h1>
+    <h1 className='enent_heading'>SELECT THE COUNTRIES</h1>
 
-    <div className='countries'>
 
-    <div className='row_1'>
-    <div className='events'><a><img></img></a></div>
-    <div className='events'><a></a></div>
-    <div className='events'><a></a></div>
+
+    <div className='countrty_cards'>
+    <EventCard country_name = "USA"/>
+    <EventCard country_name = "Canada"/>
+    <EventCard country_name = "Australia"/>
+    <EventCard country_name = "Saudi Arabia"/>
     </div>
 
-    <div className='row_2'>
-    <div className='events'></div>
-    <div className='events'></div>
-    <div className='events'></div>
+    <div className='countrty_cards'>
+    <EventCard country_name = "United Kingdom"/>
+    <EventCard country_name = "Morocco"/>
+    <EventCard country_name = "Spain"/>
+    <EventCard country_name = "Austria"/>
     </div>
 
-
-    <div className='row_3'>
-    <div className='events'></div>
-    <div className='events'></div>
-    <div className='events'></div>
-    </div>
-
-
-
-
-    </div>
+   
 
 
       <Footer/>
