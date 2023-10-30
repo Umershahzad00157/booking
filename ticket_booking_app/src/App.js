@@ -4,11 +4,13 @@ import Login from './components/Login';
 import SignUp from './components/SignUp';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
+import EventDetail from './components/EventDetail';
 
 function App() {
   return (
     <div >
   <NavBar/>
+  <EventDetail/>
     
     <Routes>
     <Route path='/signup' element={<SignUp/>}/>

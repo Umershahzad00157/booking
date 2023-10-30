@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   return (
+    <div>
     <div  className='nav_main'>
     <div className='logo'>
     <h1 className='title'>Book your ticket</h1>
@@ -18,6 +19,9 @@ const NavBar = () => {
     </ul>
     </div>
     
+    
+    </div>
+    <hr className='nav_ends'></hr>
     
     </div>
   )
